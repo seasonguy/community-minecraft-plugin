@@ -1,0 +1,8 @@
+name: HelloWorldPlugin
+main: com.gmail.seasonguy445.helloworldplugin.Core
+version: 0.0.1-SNAPSHOT
+description: Hello world!
+commands:
+  helloworld:
+    description: Hello, world!
+    usage: /helloworld

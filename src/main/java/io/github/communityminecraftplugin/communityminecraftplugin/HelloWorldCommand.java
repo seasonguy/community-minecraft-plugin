@@ -8,11 +8,8 @@ public class HelloWorldCommand implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender s, Command c, String l, String[] arg3) {
-		if(c.getName().equalsIgnoreCase("helloworld")) {
-			s.sendMessage(Core.HELLO_WORLD);
-			return true;
-		}
-		return true;
+	    s.sendMessage(Core.HELLO_WORLD);
+	    return true;
 	}
 	
 }

@@ -1,10 +1,10 @@
-package com.gmail.seasonguy445.helloworldplugin;
+package io.github.communityminecraftplugin.communityminecraftplugin;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Core extends JavaPlugin {
 	
-	public final static String HELLO_WORLD = "Hello, world!";
+	public static final String HELLO_WORLD = "Hello, world!";
 	
 	@Override
 	public void onEnable(){

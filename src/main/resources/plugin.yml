@@ -1,6 +1,6 @@
 name: CommunityMinecraftPlugin
 main: io.github.communityminecraftplugin.communityminecraftplugin.Core
-version: 0.0.1-SNAPSHOT
+version: ${project.version}
 description: Hello world!
 commands:
   helloworld:

@@ -1,8 +1,10 @@
-package io.github.communityminecraftplugin.communityminecraftplugin;
+package io.github.communityminecraftplugin.communityminecraftplugin.command;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+
+import io.github.communityminecraftplugin.communityminecraftplugin.Core;
 
 public class HelloWorldCommand implements CommandExecutor {
 

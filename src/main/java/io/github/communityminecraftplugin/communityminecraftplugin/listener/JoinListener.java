@@ -34,7 +34,7 @@ public class JoinListener implements Listener {
 			@Override
 			public void run() {
 				if (event.getPlayer() != null && event.getPlayer().isOnline()) {
-					event.getPlayer().sendMessage(Settings.MESSAGES_WELCOME.getString().replaceAll("%player", event.getPlayer().getDisplayName()));
+					event.getPlayer().sendMessage(Settings.MESSAGES_WELCOME.getString().replace("%player", event.getPlayer().getDisplayName()));
 				}
 			}
 		}.runTaskLater(plugin, 10);

@@ -1,9 +1,11 @@
-package io.github.communityminecraftplugin.communityminecraftplugin;
+package io.github.communityminecraftplugin.communityminecraftplugin.listener;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
+
+import io.github.communityminecraftplugin.communityminecraftplugin.Core;
 
 public class HelloWorldChatListener implements Listener {
 	

@@ -6,3 +6,6 @@ commands:
   helloworld:
     description: Hello, world!
     usage: /helloworld
+  fly:
+    description: Fly around!
+    usage: /fly (Optional <user>)

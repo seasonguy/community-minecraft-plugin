@@ -2,6 +2,7 @@ package io.github.communityminecraftplugin.communityminecraftplugin;
 
 import java.io.File;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.command.FlyCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.command.HelloWorldCommand;
@@ -39,7 +40,10 @@ public class Core extends JavaPlugin {
 	 */
 	private void postInit() {
 		getLogger().info(HELLO_WORLD);
+
 		getCommand("helloworld").setExecutor(new HelloWorldCommand());
+		getCommand("fly").setExecutor(new FlyCommand());
+
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 	}

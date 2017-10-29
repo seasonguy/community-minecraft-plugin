@@ -5,6 +5,7 @@ import java.io.File;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.command.FlyCommand;
+import io.github.communityminecraftplugin.communityminecraftplugin.command.GetItemCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.command.HelloWorldCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Configuration;
 import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
@@ -44,6 +45,7 @@ public class Core extends JavaPlugin {
 
 		getCommand("helloworld").setExecutor(new HelloWorldCommand());
 		getCommand("fly").setExecutor(new FlyCommand());
+		getCommand("getitem").setExecutor(new GetItemCommand());
 
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);

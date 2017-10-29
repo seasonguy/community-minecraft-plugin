@@ -9,3 +9,6 @@ commands:
   fly:
     description: Fly around!
     usage: /fly (Optional <user>)
+  giveitem:
+    description: Give a UsableItem to a player
+    usage: /giveitem <Item> [Player]

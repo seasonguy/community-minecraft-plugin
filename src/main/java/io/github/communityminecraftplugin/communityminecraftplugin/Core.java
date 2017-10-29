@@ -2,14 +2,15 @@ package io.github.communityminecraftplugin.communityminecraftplugin;
 
 import java.io.File;
 
-import io.github.communityminecraftplugin.communityminecraftplugin.command.FlyCommand;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.command.FlyCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.command.HelloWorldCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Configuration;
 import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
 import io.github.communityminecraftplugin.communityminecraftplugin.listener.HelloWorldChatListener;
 import io.github.communityminecraftplugin.communityminecraftplugin.listener.JoinListener;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItemManager;
 
 public class Core extends JavaPlugin {
 	
@@ -46,6 +47,9 @@ public class Core extends JavaPlugin {
 
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);
+		
+		// Register the UsableItemManager
+		new UsableItemManager(this);
 	}
 	
 }

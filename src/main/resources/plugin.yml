@@ -11,4 +11,4 @@ commands:
     usage: /fly (Optional <user>)
   getitem:
     description: Give a UsableItem to a player
-    usage: /getitem <Item> [Player]
+    usage:

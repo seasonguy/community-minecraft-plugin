@@ -11,6 +11,8 @@ import org.bukkit.inventory.ItemStack;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItemManager;
 
+import java.util.Optional;
+
 /**
  * 
  * @author xADudex
@@ -33,46 +35,44 @@ public class GetItemCommand implements CommandExecutor
 			sender.sendMessage(pref + "----------- Avalible Items: -----------");
 			for(UsableItem item : UsableItemManager.getInstance().getItems())
 			{
-				sender.sendMessage(pref + " - " + go + item.getClass().getName());
+				sender.sendMessage(pref + " - " + go + item.getClass().getSimpleName());
 			}
 			sender.sendMessage(pref);
 			sender.sendMessage("Use " + go + "/" + cmd.getLabel() + " <ItemName> [player]");
 		}
-		else
-		{
-			Player target = null;
-			if(sender instanceof Player)
-			{
-				target = (Player) sender;
-			}
-			if(args.length >= 2)
-			{
-				target = Bukkit.getPlayer(args[2]);
-				if(target == null)
-				{
-					sender.sendMessage(pref + "Unknown player " + go + args[2]);
-					return false;
-				}
-			}
-			if(target == null)
-			{
-				sender.sendMessage(pref + "Please specify a player to give the item to.");
-				return false;
-			}
-			
-			String search = args[1].toLowerCase();
-			for(UsableItem item : UsableItemManager.getInstance().getItems())
-			{
-				if(item.getClass().getName().toLowerCase().startsWith(search))
-				{
-					ItemStack stack = item.getExampleItem();
-					target.getInventory().addItem(stack);
-					sender.sendMessage(pref + "Gave one " + go + item.getClass().getName() + gr + " to " + go + target.getName());
-					return false;
-				}
-			}
-			sender.sendMessage(pref + "Unknown item " + go + args[1]);
-		}
+
+		else {
+            Player target = null;
+            if (sender instanceof Player) {
+                target = (Player) sender;
+            }
+            if (args.length >= 2) {
+                target = Bukkit.getPlayer(args[1]);
+                if (target == null) {
+                    sender.sendMessage(pref + "Unknown player " + go + args[2]);
+                    return false;
+                }
+            }
+            if (target == null) {
+                sender.sendMessage(pref + "Please specify a player to give the item to.");
+                return false;
+            }
+
+            String search = args[0].toLowerCase();
+            Optional<UsableItem> optitem = UsableItemManager.getInstance().searchItem(search);
+
+            if (optitem.isPresent()) {
+                UsableItem item = optitem.get();
+                ItemStack stack = item.getExampleItem();
+                target.getInventory().addItem(stack);
+                sender.sendMessage(pref + "Gave one " + go + item.getClass().getSimpleName() + gr + " to " + go + target.getName());
+                return false;
+
+            } else {
+
+                sender.sendMessage(pref + "Unknown item " + go + args[0]);
+            }
+        }
 		
 		return false;
 	}

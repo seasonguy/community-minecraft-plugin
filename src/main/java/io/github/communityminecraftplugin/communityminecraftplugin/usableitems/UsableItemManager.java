@@ -1,8 +1,11 @@
 package io.github.communityminecraftplugin.communityminecraftplugin.usableitems;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
+import java.util.function.Predicate;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.CreeperItem;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -48,15 +51,16 @@ public class UsableItemManager implements Listener
 		
 		Bukkit.getPluginManager().registerEvents(this, plugin);
 		
-		registerItems();
+		registerItems(plugin);
 	}
 	
 	/**
 	 * Add an instance of items here for registration
 	 */
-	public void registerItems()
+	private void registerItems(JavaPlugin plugin)
 	{
 		new LeapItem();
+		new CreeperItem(plugin);
 	}
 	
 	/**
@@ -86,6 +90,15 @@ public class UsableItemManager implements Listener
 	public Set<UsableItem> getItems()
 	{
 		return ImmutableSet.copyOf(items);
+	}
+
+    /**
+     * Search for an UsableItem based on its name.
+     * @param name Item name to be found the fitting UsableItem
+     * @return Optional of the found UsableItem. May be empty.
+     */
+	public Optional<UsableItem> searchItem(String name){
+		return this.items.stream().filter(item -> item.getClass().getSimpleName().equalsIgnoreCase(name)).findAny();
 	}
 	
 	@EventHandler

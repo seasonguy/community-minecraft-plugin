@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.CreeperItem;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.PumpkinItem;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -61,6 +62,7 @@ public class UsableItemManager implements Listener
 	{
 		new LeapItem();
 		new CreeperItem(plugin);
+		new PumpkinItem(plugin);
 	}
 	
 	/**

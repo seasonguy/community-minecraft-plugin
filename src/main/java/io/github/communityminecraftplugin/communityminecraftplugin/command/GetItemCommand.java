@@ -59,6 +59,7 @@ public class GetItemCommand implements CommandExecutor
             }
 
             String search = args[0].toLowerCase();
+            //Find Optional UsableItem
             Optional<UsableItem> optitem = UsableItemManager.getInstance().searchItem(search);
 
             if (optitem.isPresent()) {

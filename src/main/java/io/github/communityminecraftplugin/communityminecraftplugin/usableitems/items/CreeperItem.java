@@ -52,6 +52,7 @@ public class CreeperItem extends UsableItem implements Listener
 
 		Bat bat = player.getWorld().spawn(player.getEyeLocation(), Bat.class);
 		bat.setInvulnerable(true);
+		bat.setSilent(true);
 		bat.addPotionEffect(INVISIBLE);
 		bat.setVelocity(player.getLocation().getDirection());
 		

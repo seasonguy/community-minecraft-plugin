@@ -34,6 +34,7 @@ public class LeapItem extends UsableItem
 	public LeapItem()
 	{
 		super(Material.FEATHER, ChatColor.GREEN + "Leap");
+		this.register();
 	}
 	
 	@Override
@@ -44,12 +45,12 @@ public class LeapItem extends UsableItem
 		{
 			double diff = (nextUse - System.currentTimeMillis()) / 1000.0; 
 			DecimalFormat format = new DecimalFormat("0.00");
-			player.sendMessage(ChatColor.GREEN + "Leap>" + ChatColor.GRAY + 
+			player.sendMessage(ChatColor.GREEN + "Leap> " + ChatColor.GRAY +
 					"Please wait another " + ChatColor.GOLD + format.format(diff) + "s" + ChatColor.GRAY + " before using this item again.");
 			return EventAction.CANCEL;
 		}
 		
-		cooldown.put(player.getUniqueId(), System.currentTimeMillis() * COOLDOWN_MS);
+		cooldown.put(player.getUniqueId(), System.currentTimeMillis() + COOLDOWN_MS);
 		
 		Vector v = player.getLocation().getDirection().normalize().add(new Vector(0, 1, 0));
 		

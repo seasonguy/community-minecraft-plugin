@@ -16,13 +16,13 @@ import org.bukkit.inventory.meta.ItemMeta;
  */
 public abstract class UsableItem
 {
-	public static enum EventAction 
+	public enum EventAction
 	{
-		NONE,CANCEL,UNCANCEL;
+		NONE,CANCEL, UNCANCEL
 	}
 	
-	protected final Material mat;
-	protected final String name;
+	private final Material mat;
+    private final String name;
 
 	/**
 	 * A usable item which can be used to trigger code on different events
@@ -38,6 +38,10 @@ public abstract class UsableItem
 	{
 		this.mat = mat;
 		this.name = name;
+	}
+
+	public String getName(){
+		return this.name;
 	}
 	
 	/**
@@ -57,7 +61,7 @@ public abstract class UsableItem
 	 * 
 	 * @return Returns false if this item was already registered
 	 */
-	public boolean register()
+	protected boolean register()
 	{
 		return UsableItemManager.getInstance().registerItem(this);
 	}
@@ -90,12 +94,8 @@ public abstract class UsableItem
 		{
 			return true;
 		}
-		if(item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(name))
-		{
-			return true;
-		}
-		return false;
-	}
+        return item.hasItemMeta() && item.getItemMeta().hasDisplayName() && item.getItemMeta().getDisplayName().equals(name);
+    }
 	
 	/**
 	 * @return Returns an example item which will match and activate this item.

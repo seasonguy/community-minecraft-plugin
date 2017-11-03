@@ -19,7 +19,10 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.google.common.collect.ImmutableSet;
+
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItem.EventAction;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.LeapItem;
 
 /**
  * 
@@ -44,6 +47,16 @@ public class UsableItemManager implements Listener
 		inst = this;
 		
 		Bukkit.getPluginManager().registerEvents(this, plugin);
+		
+		registerItems();
+	}
+	
+	/**
+	 * Add an instance of items here for registration
+	 */
+	public void registerItems()
+	{
+		new LeapItem();
 	}
 	
 	/**
@@ -64,6 +77,15 @@ public class UsableItemManager implements Listener
 	public boolean unregisterItem(UsableItem item)
 	{
 		return items.remove(item);
+	}
+	
+	/**
+	 * 
+	 * @return Returns a list of registered UsableItems
+	 */
+	public Set<UsableItem> getItems()
+	{
+		return ImmutableSet.copyOf(items);
 	}
 	
 	@EventHandler

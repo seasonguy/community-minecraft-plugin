@@ -1,5 +1,7 @@
 package io.github.communityminecraftplugin.communityminecraftplugin.listener;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
+import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -13,7 +15,9 @@ public class DamageListener implements Listener{
      */
     @EventHandler
     public void onDamage(EntityDamageEvent event){
-        event.setCancelled(true);
+        if (event.getEntityType() == EntityType.PLAYER && !Settings.GENERAL_PLAYER_DAMAGE.getBoolean()) {
+            event.setCancelled(true);
+        }
     }
 
 }

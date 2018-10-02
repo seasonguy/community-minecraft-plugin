@@ -20,7 +20,8 @@ public enum Settings {
 	 * Welcome message.
 	 * @return {@link String}
 	 */
-	MESSAGES_WELCOME ("messages.welcome", "&7Welcome &a%player&7! Enjoy this plugin coded during &f#Hacktoberfest&7!");
+	MESSAGES_WELCOME ("messages.welcome", "&7Welcome &a%player&7! Enjoy this plugin coded during &f#Hacktoberfest&7!"),
+        GENERAL_PLAYER_DAMAGE ("general.player_damage", true);
 	
 	/**
 	 * Quicker access to all the values stored in the configuration.

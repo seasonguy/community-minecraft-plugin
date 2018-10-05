@@ -6,7 +6,10 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class HacktoberfestListener implements Listener {
-
+    /**
+     * If its october ask the user if they have participated in Hacktoberfest
+     * and let them know how many days there are left to participate
+     */
     @SuppressWarnings("MagicConstant")
     public void onPlayerJoin(PlayerJoinEvent event) {
         if (Calendar.getInstance().get(Calendar.MONTH) == Calendar.OCTOBER) {

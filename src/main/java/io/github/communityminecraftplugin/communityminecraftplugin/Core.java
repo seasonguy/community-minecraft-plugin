@@ -1,5 +1,6 @@
 package io.github.communityminecraftplugin.communityminecraftplugin;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.listener.HacktoberfestListener;
 import java.io.File;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.listener.DamageListener;
@@ -51,6 +52,7 @@ public class Core extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);
 		getServer().getPluginManager().registerEvents(new DamageListener(), this);
+		getServer().getPluginManager().registerEvents(new HacktoberfestListener(), this);
 		// Register the UsableItemManager
 		new UsableItemManager(this);
 	}

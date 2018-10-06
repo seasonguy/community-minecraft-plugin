@@ -2,6 +2,7 @@ package io.github.communityminecraftplugin.communityminecraftplugin;
 
 import java.io.File;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.command.HealCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.listener.DamageListener;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -47,6 +48,7 @@ public class Core extends JavaPlugin {
 		getCommand("helloworld").setExecutor(new HelloWorldCommand());
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("getitem").setExecutor(new GetItemCommand());
+		getCommand("heal").setExecutor(new HealCommand());
 
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);

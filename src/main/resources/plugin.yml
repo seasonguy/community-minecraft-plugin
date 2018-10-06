@@ -12,3 +12,6 @@ commands:
   getitem:
     description: Give a UsableItem to a player
     usage:
+  heal:
+    description: /heal
+    usage: /heal

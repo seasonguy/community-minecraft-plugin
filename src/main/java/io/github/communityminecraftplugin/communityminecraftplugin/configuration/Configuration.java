@@ -17,7 +17,7 @@ public class Configuration {
 	private JavaPlugin plugin;
 
 	private File file;
-	public FileConfiguration config;
+	private FileConfiguration config;
 
 	public Configuration(JavaPlugin plugin, File file) {
 		this.plugin = plugin;

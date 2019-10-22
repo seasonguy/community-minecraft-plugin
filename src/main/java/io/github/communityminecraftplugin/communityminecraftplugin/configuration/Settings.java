@@ -61,7 +61,7 @@ public enum Settings {
 	 */
 	public int getInt() {
 		if (values.containsKey(this)) {
-			return Integer.valueOf(String.valueOf(values.get(this)));
+			return Integer.parseInt(String.valueOf(values.get(this)));
 		}
 		return (int) defaultValue;
 	}
@@ -72,7 +72,7 @@ public enum Settings {
 	 */
 	public double getDouble() {
 		if (values.containsKey(this)) {
-			return new BigDecimal(Double.valueOf(String.valueOf(values.get(this)))).setScale(3, RoundingMode.HALF_UP).doubleValue();
+			return new BigDecimal(Double.parseDouble(String.valueOf(values.get(this)))).setScale(3, RoundingMode.HALF_UP).doubleValue();
 		}
 		return (double) defaultValue;
 	}
@@ -83,9 +83,9 @@ public enum Settings {
 	 */
 	public long getLong() {
 		if (values.containsKey(this)) {
-			return Long.valueOf(String.valueOf(values.get(this)));
+			return Long.parseLong(String.valueOf(values.get(this)));
 		}
-		return (long) values.get(defaultValue);
+		return (long) defaultValue;
 	}
 	
 	/**
@@ -94,7 +94,7 @@ public enum Settings {
 	 */
 	public boolean getBoolean() {
 		if (values.containsKey(this)) {
-			return Boolean.valueOf(String.valueOf(values.get(this)));
+			return Boolean.parseBoolean(String.valueOf(values.get(this)));
 		}
 		return (boolean) defaultValue;
 	}

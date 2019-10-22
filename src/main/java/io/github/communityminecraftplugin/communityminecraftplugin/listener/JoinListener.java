@@ -1,16 +1,14 @@
 package io.github.communityminecraftplugin.communityminecraftplugin.listener;
 
-import io.github.communityminecraftplugin.communityminecraftplugin.Core;
-import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
-/**
- * @author Jed
- * @see <a href="https://github.com/s3xi">https://github.com/s3xi</a>
- */
+import io.github.communityminecraftplugin.communityminecraftplugin.Core;
+import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
+
 public class JoinListener implements Listener {
 
     private Core plugin;

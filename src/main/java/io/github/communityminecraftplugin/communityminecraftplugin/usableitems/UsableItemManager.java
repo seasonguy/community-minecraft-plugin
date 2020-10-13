@@ -3,10 +3,7 @@ package io.github.communityminecraftplugin.communityminecraftplugin.usableitems;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
-import java.util.function.Predicate;
 
-import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.CreeperItem;
-import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.PumpkinItem;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
@@ -26,7 +23,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.google.common.collect.ImmutableSet;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItem.EventAction;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.CreeperItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.LeapItem;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.PumpkinItem;
 
 /**
  * 

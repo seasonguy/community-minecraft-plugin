@@ -1,5 +1,7 @@
 package io.github.communityminecraftplugin.communityminecraftplugin.command;
 
+import java.util.Optional;
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -10,8 +12,6 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItemManager;
-
-import java.util.Optional;
 
 /**
  * 

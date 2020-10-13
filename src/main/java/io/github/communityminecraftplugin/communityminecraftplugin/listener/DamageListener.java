@@ -1,10 +1,11 @@
 package io.github.communityminecraftplugin.communityminecraftplugin.listener;
 
-import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+
+import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
 
 public class DamageListener implements Listener{
 

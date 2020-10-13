@@ -11,13 +11,9 @@ public class HelloWorldChatListener implements Listener {
 	
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onChat(AsyncPlayerChatEvent e){
-		
 		if(e.getMessage().equalsIgnoreCase(Core.HELLO_WORLD)){
-			
 			e.getPlayer().sendMessage(Core.HELLO_WORLD);
-			
 		}
-		
 	}
 	
 }

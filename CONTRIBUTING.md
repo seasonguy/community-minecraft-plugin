@@ -1,4 +1,9 @@
-**CONTRIBUTING**
+# CONTRIBUTING Guidelines
 
-Add anything! This is a java plugin for Minecraft using the Spigot API. https://spigotmc.org/
-make sure you document your code and comment it as yours.
+Any and all additions are welcomed!
+
+## Rules
+- Do not open spammy pull requests or insignificant additions
+- Please work to add something new and your own!
+- Do not harass contributors, maintainers, and other users!
+- Please format your pull request neatly

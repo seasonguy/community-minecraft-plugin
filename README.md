@@ -9,7 +9,12 @@ is uses the tried and true Bukkit/Spigot API.
 - Spigot/Bukkit API
 - Your time
 
-# Pull requests
+## Resources
+- [Spigot Plugin Development](https://www.spigotmc.org/wiki/spigot-plugin-development/)
+- [Spigot/Bukkit Docs](https://hub.spigotmc.org/javadocs/bukkit/)
+- [BukkitWiki](https://bukkit.gamepedia.com/Main_Page)
+
+## Pull requests
 Meaningful pull requests are welcomed! Spammy or invalid pull requests are not,
 and will be marked as so. If you have two or more invalid requests you
 will be disqualified from this hacktoberfest and possibly future hacktoberfest's

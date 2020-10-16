@@ -16,6 +16,7 @@ public enum Settings {
 	 */
 	MESSAGES_WELCOME ("messages.welcome", "&7Welcome &a%player&7! Enjoy this plugin coded during &f#Hacktoberfest&7!"),
 	HACKTOBERFEST_WELCOME("hacktoberfest.welcome", "&6Have you participated in Hacktoberfest yet? There are still &a%s&6 days left!"),
+	HACKTOBERFEST_ERROR("hacktoberfest.error", "&cHacktoberfest isn't here yet!"),
 	CMD_CONSOLE_ERROR("cmd.console.error", "&4You can't execute this from the console"),
 	CMD_PLAYER_NOT_ONLINE("cmd.player.notonline", "&4Sorry, %player doesn't seem to be online!"),
 	CMD_NO_PERMISSION("cmd.nopermission", "&cYou do not have permission!"),

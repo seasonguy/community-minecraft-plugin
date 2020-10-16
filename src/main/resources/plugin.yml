@@ -3,6 +3,9 @@ main: io.github.communityminecraftplugin.communityminecraftplugin.Core
 version: ${project.version}
 description: Hello world!
 commands:
+  hacktoberfest:
+    description: The Hacktoberfest command!
+    usage: /hacktoberfest
   helloworld:
     description: Hello, world!
     usage: /helloworld

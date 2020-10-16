@@ -68,7 +68,7 @@ public class GetItemCommand implements CommandExecutor
                 UsableItem item = optitem.get();
                 ItemStack stack = item.getExampleItem();
                 target.getInventory().addItem(stack);
-                sender.sendMessage(String.format(Settings.CMD_GETITEM_SUCCESS.getString(), item.getName()).replace("%player", target.getName()));
+                sender.sendMessage(String.format(Settings.CMD_GETITEM_SUCCESS.getString().replace("%player", target.getName()), item.getName()));
                 return true;
 
             } else {

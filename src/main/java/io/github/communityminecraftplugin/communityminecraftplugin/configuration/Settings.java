@@ -25,7 +25,7 @@ public enum Settings {
 	CMD_FLY_OTHER_TOGGLE_ON("cmd.fly.other.toggleon", "&a%player can now fly!"),
 	CMD_FLY_OTHER_TOGGLE_OFF("cmd.fly.other.toggleoff", "&c%player can no longer fly!"),
 	CMD_HEAL_SUCCESS("cmd.heal.success", "&cYou have been healed!"),
-	CMD_GETITEM_SUCCESS("cmd.getitem.success", "&aGave one %6%s&a to &6%player"),
+	CMD_GETITEM_SUCCESS("cmd.getitem.success", "&aGave one &6%s&a to &6%player"),
 	CMD_GETITEM_UNKNOWN("cmd.getitem.unknown", "&cUnknown item %s"),
 	HELLO_WORLD("msg.helloworld", "Hello, World!"),
 	GENERAL_PLAYER_DAMAGE ("general.player_damage", true);

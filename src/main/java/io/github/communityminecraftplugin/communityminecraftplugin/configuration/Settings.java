@@ -16,6 +16,14 @@ public enum Settings {
 	 */
 	MESSAGES_WELCOME ("messages.welcome", "&7Welcome &a%player&7! Enjoy this plugin coded during &f#Hacktoberfest&7!"),
 	HACKTOBERFEST_WELCOME("hacktoberfest.welcome", "&6Have you participated in Hacktoberfest yet? There are still &a%s&6 days left!"),
+	CMD_CONSOLE_ERROR("cmd.console.error", "&4You can't execute this from the console"),
+	CMD_PLAYER_NOT_ONLINE("cmd.player.notonline", "&4Sorry, %player doesn't seem to be online!"),
+	CMD_NO_PERMISSION("cmd.nopermission", "&cYou do not have permission!"),
+	CMD_FEED_SUCCESS("cmd.feed.success", "&cYou have been fed!"),
+	CMD_FLY_TOGGLE_ON("cmd.fly.toggleon", "&cYou are now able to fly!"),
+	CMD_FLY_TOGGLE_OFF("cmd.fly.toggleoff","&cYou can no longer fly!"),
+	CMD_FLY_OTHER_TOGGLE_ON("cmd.fly.other.toggleon", "&a%player can now fly!"),
+	CMD_FLY_OTHER_TOGGLE_OFF("cmd.fly.other.toggleoff", "&c%player can no longer fly!"),
 	GENERAL_PLAYER_DAMAGE ("general.player_damage", true);
 	
 	/**

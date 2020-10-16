@@ -6,6 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.communityminecraftplugin.communityminecraftplugin.command.FlyCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.command.GetItemCommand;
+import io.github.communityminecraftplugin.communityminecraftplugin.command.HacktoberfestCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.command.HealCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.command.HelloWorldCommand;
 import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Configuration;
@@ -48,6 +49,7 @@ public class Core extends JavaPlugin {
 		getCommand("fly").setExecutor(new FlyCommand());
 		getCommand("getitem").setExecutor(new GetItemCommand());
 		getCommand("heal").setExecutor(new HealCommand());
+		getCommand("hacktoberfest").setExecutor(new HacktoberfestCommand());
 
 		getServer().getPluginManager().registerEvents(new HelloWorldChatListener(), this);
 		getServer().getPluginManager().registerEvents(new JoinListener(this), this);

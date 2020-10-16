@@ -24,6 +24,8 @@ public enum Settings {
 	CMD_FLY_TOGGLE_OFF("cmd.fly.toggleoff","&cYou can no longer fly!"),
 	CMD_FLY_OTHER_TOGGLE_ON("cmd.fly.other.toggleon", "&a%player can now fly!"),
 	CMD_FLY_OTHER_TOGGLE_OFF("cmd.fly.other.toggleoff", "&c%player can no longer fly!"),
+	CMD_HEAL_SUCCESS("cmd.heal.success", "&cYou have been healed!"),
+	HELLO_WORLD("msg.helloworld", "Hello, World!"),
 	GENERAL_PLAYER_DAMAGE ("general.player_damage", true);
 	
 	/**

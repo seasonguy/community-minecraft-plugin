@@ -56,7 +56,7 @@ public class LeapItem extends UsableItem
 		
 		player.setVelocity(v);
 		
-		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDERDRAGON_FLAP, 1, 1);
+		player.getWorld().playSound(player.getLocation(), Sound.ENTITY_ENDER_DRAGON_FLAP, 1, 1);
 		
 		return EventAction.CANCEL;
 	}

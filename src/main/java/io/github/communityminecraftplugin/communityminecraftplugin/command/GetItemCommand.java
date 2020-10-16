@@ -10,6 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
+import io.github.communityminecraftplugin.communityminecraftplugin.configuration.Settings;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.UsableItemManager;
 
@@ -38,7 +39,8 @@ public class GetItemCommand implements CommandExecutor
 				sender.sendMessage(pref + " - " + go + item.getClass().getSimpleName());
 			}
 			sender.sendMessage(pref);
-			sender.sendMessage("Use " + go + "/" + cmd.getLabel() + " <ItemName> [player]");
+			
+			return false;
 		}
 
 		else {
@@ -49,12 +51,12 @@ public class GetItemCommand implements CommandExecutor
             if (args.length >= 2) {
                 target = Bukkit.getPlayer(args[1]);
                 if (target == null) {
-                    sender.sendMessage(pref + "Unknown player " + go + args[2]);
+                    sender.sendMessage(Settings.CMD_PLAYER_NOT_ONLINE.getString().replace("%player", args[1]));
                     return false;
                 }
             }
             if (target == null) {
-                sender.sendMessage(pref + "Please specify a player to give the item to.");
+                sender.sendMessage(Settings.CMD_PLAYER_NOT_ONLINE.getString().replace("%player", args[1]));
                 return false;
             }
 
@@ -66,12 +68,12 @@ public class GetItemCommand implements CommandExecutor
                 UsableItem item = optitem.get();
                 ItemStack stack = item.getExampleItem();
                 target.getInventory().addItem(stack);
-                sender.sendMessage(pref + "Gave one " + go + item.getClass().getSimpleName() + gr + " to " + go + target.getName());
-                return false;
+                sender.sendMessage(String.format(Settings.CMD_GETITEM_SUCCESS.getString(), item.getName()).replace("%player", target.getName()));
+                return true;
 
             } else {
 
-                sender.sendMessage(pref + "Unknown item " + go + args[0]);
+                sender.sendMessage(String.format(Settings.CMD_GETITEM_UNKNOWN.getString(), search));
             }
         }
 		

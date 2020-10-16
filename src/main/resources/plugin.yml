@@ -11,7 +11,7 @@ commands:
     usage: /fly (Optional <user>)
   getitem:
     description: Give a UsableItem to a player
-    usage:
+    usage:/getitem
   heal:
     description: /heal
     usage: /heal

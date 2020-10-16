@@ -19,3 +19,16 @@ Meaningful pull requests are welcomed! Spammy or invalid pull requests are not,
 and will be marked as so. If you have two or more invalid requests you
 will be disqualified from this hacktoberfest and possibly future hacktoberfest's
 as well! So please don't!
+
+## Contributors
+- [seasonguy](https://github.com/seasonguy)
+- [s3xi](https://github.com/s3xi)
+- [monst12](https://github.com/monst12)
+- [kristianvld](https://github.com/kristianvld)
+- [Vankka](https://github.com/Vankka)
+- [Kameramann23](https://github.com/Kameramann23)
+- [RubbaBoy](https://github.com/RubbaBoy)
+- [PixeLInc](https://github.com/PixeLInc)
+- [LordSpigot](https://github.com/LordSpigot)
+- [JhonatanPereira](https://github.com/JhonatanPereira)
+- [jvogit](https://github.com/jvogit)

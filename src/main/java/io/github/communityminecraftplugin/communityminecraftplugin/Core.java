@@ -18,8 +18,6 @@ import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.U
 
 public class Core extends JavaPlugin {
 	
-	public static final String HELLO_WORLD = "Hello, world!";
-	
 	@Override
 	public void onEnable(){
 		preInit();
@@ -28,7 +26,7 @@ public class Core extends JavaPlugin {
 	
 	@Override
 	public void onDisable(){
-		getLogger().info(HELLO_WORLD.replace("Hello,", "Goodbye,"));
+		getLogger().info(Settings.HELLO_WORLD.getString().replace("Hello,", "Goodbye,"));
 	}
 	
 	/**
@@ -44,7 +42,7 @@ public class Core extends JavaPlugin {
 	 * I.e. loading objects that depend on configurations, etc.
 	 */
 	private void postInit() {
-		getLogger().info(HELLO_WORLD);
+		getLogger().info(Settings.HELLO_WORLD.getString());
 
 		getCommand("helloworld").setExecutor(new HelloWorldCommand());
 		getCommand("fly").setExecutor(new FlyCommand());

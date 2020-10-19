@@ -15,6 +15,7 @@ public enum Settings {
 	 * @return {@link String}
 	 */
 	MESSAGES_WELCOME ("messages.welcome", "&7Welcome &a%player&7! Enjoy this plugin coded during &f#Hacktoberfest&7!"),
+	HACKTOBERFEST_WELCOME("hacktoberfest.welcome", "&6Have you participated in Hacktoberfest yet? There are still &a%s&6 days left!"),
 	GENERAL_PLAYER_DAMAGE ("general.player_damage", true);
 	
 	/**

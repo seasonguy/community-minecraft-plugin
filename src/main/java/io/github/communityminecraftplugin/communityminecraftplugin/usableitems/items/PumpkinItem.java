@@ -114,7 +114,7 @@ public class PumpkinItem extends UsableItem implements Listener {
                 0.4);
 
         //play some sound
-        loc.getWorld().playSound(loc, Sound.ENTITY_BOBBER_SPLASH, 6f, 1);
+        loc.getWorld().playSound(loc, Sound.ENTITY_FISHING_BOBBER_SPLASH, 6f, 1);
     }
 
     /**

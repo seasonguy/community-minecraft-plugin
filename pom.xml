@@ -3,7 +3,7 @@
   
   <groupId>io.github.communityminecraftplugin</groupId>
   <artifactId>communityminecraftplugin</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>2020.1.0.0</version>
   <name>CommunityMinecraftPlugin</name>
   
   <repositories>
@@ -18,14 +18,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot-api</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
-      <scope>provided</scope>
-    </dependency>
-    <!--Bukkit API-->
-    <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
-      <version>1.12.2-R0.1-SNAPSHOT</version>
+      <version>1.16.3-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>

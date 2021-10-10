@@ -1,4 +1,4 @@
-# 2020 Hacktoberfest Community Minecraft Plugin
+# 2021 Hacktoberfest Community Minecraft Plugin
 This repository opened during the 2017 Hacktoberfest with the goal
 for the community to develop a Minecraft plugin together! This plugin
 is uses the tried and true Bukkit/Spigot API.

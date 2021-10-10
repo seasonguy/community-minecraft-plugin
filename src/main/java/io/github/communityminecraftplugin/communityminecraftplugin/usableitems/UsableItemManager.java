@@ -26,6 +26,7 @@ import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.U
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.CreeperItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.LeapItem;
 import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.PumpkinItem;
+import io.github.communityminecraftplugin.communityminecraftplugin.usableitems.items.WavyStick;
 
 /**
  * 
@@ -62,6 +63,7 @@ public class UsableItemManager implements Listener
 		new LeapItem();
 		new CreeperItem(plugin);
 		new PumpkinItem(plugin);
+		new WavyStick(plugin);
 	}
 	
 	/**

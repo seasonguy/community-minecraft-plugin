@@ -1,7 +1,7 @@
 name: CommunityMinecraftPlugin
 main: io.github.communityminecraftplugin.communityminecraftplugin.Core
 version: ${project.version}
-description: Hello world!
+description: This plugin is a collection of open source contributions mainly done in the month of October for Hacktoberfest
 commands:
   hacktoberfest:
     description: The Hacktoberfest command!

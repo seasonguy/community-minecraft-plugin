@@ -3,7 +3,7 @@
   
   <groupId>io.github.communityminecraftplugin</groupId>
   <artifactId>communityminecraftplugin</artifactId>
-  <version>2020.1.0.0</version>
+  <version>2021</version>
   <name>CommunityMinecraftPlugin</name>
   
   <repositories>

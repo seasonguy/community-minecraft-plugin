@@ -23,15 +23,15 @@ public class HacktoberfestCommand implements CommandExecutor {
 	
 	public static void performHacktoberfestMessage(CommandSender p) {
 		if (Calendar.getInstance().get(Calendar.MONTH) == Calendar.OCTOBER) {
-            String msg = Settings.HACKTOBERFEST_WELCOME.getString();
-            String url = ChatColor.AQUA + "https://hacktoberfest.digitalocean.com/";
-            YearMonth yearMonthObject = YearMonth.of(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH) + 1);
-            int daysRemaining = yearMonthObject.lengthOfMonth() - Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
-            p.sendMessage(String.format(msg, String.valueOf(daysRemaining)));
-            p.sendMessage(url);
-        } else {
-        	p.sendMessage("It's not Hacktoberfest season yet!");
-        }
+		    String msg = Settings.HACKTOBERFEST_WELCOME.getString();
+		    String url = ChatColor.AQUA + "https://hacktoberfest.digitalocean.com/";
+		    YearMonth yearMonthObject = YearMonth.of(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH) + 1);
+		    int daysRemaining = yearMonthObject.lengthOfMonth() - Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
+		    p.sendMessage(String.format(msg, String.valueOf(daysRemaining)));
+		    p.sendMessage(url);
+		} else {
+			p.sendMessage("It's not Hacktoberfest season yet!");
+		}
 	}
 	
 }
